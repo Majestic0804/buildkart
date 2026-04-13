@@ -8,6 +8,7 @@ import MaterialDetailPage from './pages/MaterialDetailPage';
 import OrderMessaging from './pages/OrderMessaging';
 import ReviewsRatings from './pages/ReviewsRatings';
 import ProfileSettings from './pages/ProfileSettings';
+import LocationMarketplace from './pages/LocationMarketplace'
 
 export default function App() {
   const [page, setPage] = useState('landing');
@@ -34,6 +35,7 @@ export default function App() {
     return (
       <ContractorDashboard navigate={navigate} logout={logout} user={user} />
     );
+  if (page === 'location') return <LocationMarketplace navigate={navigate} />;
   if (page === 'supplier-dashboard')
     return (
       <ShopOwnerDashboard navigate={navigate} logout={logout} user={user} />
